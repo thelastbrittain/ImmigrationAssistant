@@ -40,8 +40,10 @@ def extract_and_modify_text_fields(pdf_path, output_pdf_path):
     fields = reader.get_fields()
 
     if fields:
-        for field_name in fields.keys():
-            text_fields.append(field_name)
+        for field_name, field_attributes in fields.items():
+            if field_attributes.get("/FT") == "/Tx":
+                text_fields.append(field_name)
+    
     
     mapped_fields = {text_field: "A" for text_field in text_fields}
     for page in writer.pages:
@@ -61,4 +63,6 @@ output_pdf = "../modified_example.pdf"  # Path to save the modified PDF
 fields = extract_and_modify_text_fields(input_pdf, output_pdf)
 
 # Print extracted fields
-print("Extracted Text Fields:", fields)
+print("Extracted Text Fields:")
+for field in fields:
+    print(field)

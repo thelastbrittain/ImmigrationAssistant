@@ -4,7 +4,17 @@
     "firstName": "",
     "middleName": "",
     "email": "",
-    "mobilePhone": ""
+    "mobilePhone": "",
+    "streetNumberName": "",
+    "aptSteFlrNumber": "",
+    "cityOrTown": "",
+    "zipCode": "",
+    "dateOfBirth": "",
+    "countryOfBirth": "",
+    "countryOfCitizenship": "",
+    "uscisAccountNumber": "",
+    "alienNumber": "",
+    "dayPhone": ""
   },
   "pdf_mappings": {
     "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/easyDocuments/g-1145-new.pdf": {
@@ -13,6 +23,23 @@
       "form1[0].#subform[0].MiddleName[0]": "middleName",
       "form1[0].#subform[0].Email[0]": "email",
       "form1[0].#subform[0].MobilePhoneNumber[0]": "mobilePhone"
+    },
+    "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/easyDocuments/i-485-new.pdf": {
+      "form1[0].#subform[0].Part1_Line1_FamilyName[0]": "lastName",
+      "form1[0].#subform[0].Part1_Line1_GivenName[0]": "firstName",
+      "form1[0].#subform[0].Part1_Line1_MiddleName[0]": "middleName",
+      "form1[0].#subform[0].Part1_Line2_StreetNumberName[0]": "streetNumberName",
+      "form1[0].#subform[0].Part1_Line2_AptSteFlrNumber[0]": "aptSteFlrNumber",
+      "form1[0].#subform[0].Part1_Line2_CityOrTown[0]": "cityOrTown",
+      "form1[0].#subform[0].Part1_Line2_ZipCode[0]": "zipCode",
+      "form1[0].#subform[0].Part1_Line5_DateOfBirth[0]": "dateOfBirth",
+      "form1[0].#subform[0].Part1_Line6_CountryofBirth[0]": "countryOfBirth",
+      "form1[0].#subform[0].Part1_Line7_CountryofCitizenship[0]": "countryOfCitizenship",
+      "form1[0].#subform[0].Part1_Line4_USCISELISAcctNumber[0]": "uscisAccountNumber",
+      "form1[0].#subform[0].Part1_Line3_AlienNumber[0]": "alienNumber",
+      "form1[0].#subform[2].Part4_Line1_DayPhone[0]": "dayPhone",
+      "form1[0].#subform[2].Part4_Line3_Email[0]": "email",
+      "form1[0].#subform[2].Part4_Line2_MobilePhone[0]": "mobilePhone"
     }
   }
 }
