@@ -40,7 +40,7 @@ def editFieldNames(fromPath, toPath):
     print(f"Updated PDF saved to: {toPath}")
 
 def main():
-    pdfPath = "server/easyDocuments/g-1145-new.pdf"
+    pdfPath = "server/easyDocuments/i-485-new.pdf"
     # outputPath = "./outputDocuments/trial1.pdf"
     
     # Get and display all field names
