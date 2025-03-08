@@ -1,42 +1,55 @@
 from flask import Flask, request, send_file, jsonify
-from pypdf import PdfReader, PdfWriter
 from flask_cors import CORS
+from pypdf import PdfReader, PdfWriter
+import zipfile
+import os
+import json
 
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/fill-pdf", methods=["POST"])
-def fill_pdf():
+# Load field mappings from a JSON file
+jsonMappingPath = "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/fieldMappings/combined_mappings.json"
+with open(jsonMappingPath, 'r') as f:
+    field_mappings = json.load(f)
+
+@app.route("/fill-pdfs", methods=["POST"])
+def fill_pdfs():
+    print("Endpoint hit!")
     # Get form data from the request
-    data = request.json
+    user_data = request.json
+    print(user_data)
 
-    # Define field mappings for the PDF (example)
-    field_mappings = {
-        "form1[0].#subform[0].LastName[0]": data.get("lastName", ""),
-        "form1[0].#subform[0].FirstName[0]": data.get("firstName", ""),
-        "form1[0].#subform[0].MiddleName[0]": data.get("middleName", ""),
-        "form1[0].#subform[0].Email[0]": data.get("email", ""),
-        "form1[0].#subform[0].MobilePhoneNumber[0]": data.get("mobilePhone", "")
-    }
+    # Prepare a ZIP file to store filled PDFs
+    zip_filename = "filled_pdfs.zip"
+    i = 0
+    with zipfile.ZipFile(zip_filename, 'w') as zipf:
+        # Process each PDF in the mapping
+        for pdf_template, pdf_fields in field_mappings["pdf_mappings"].items():
+            output_pdf_path = f"filled_{i}"
+            i += 1
+            fill_pdf(pdf_template, output_pdf_path, pdf_fields, user_data)
+            zipf.write(output_pdf_path)
+            # os.remove(output_pdf_path)  # Clean up individual filled PDFs
 
-    # Load and modify the PDF
-    input_pdf_path = "easyDocuments/g-1145-new.pdf"
-    output_pdf_path = "outputDocuments/formTest"
-    
+    # Return the ZIP file as a response
+    return send_file(zip_filename, as_attachment=True)
 
+def fill_pdf(input_pdf_path, output_pdf_path, pdf_fields, user_data):
+    """Fill a single PDF based on its field mappings."""
     reader = PdfReader(input_pdf_path)
     writer = PdfWriter()
     
     writer.clone_reader_document_root(reader)
+
+    # Map user data to PDF fields
+    mapped_fields = {pdf_field: user_data[user_input] for pdf_field, user_input in pdf_fields.items() if user_input in user_data}
     
     for page in writer.pages:
-        writer.update_page_form_field_values(page, field_mappings)
+        writer.update_page_form_field_values(page, mapped_fields)
 
-    with open(output_pdf_path, "wb") as output_file:
+    with open(output_pdf_path, 'wb') as output_file:
         writer.write(output_file)
-
-    # Return the filled PDF as a response
-    return send_file(output_pdf_path, as_attachment=True)
 
 if __name__ == "__main__":
     app.run(debug=True)

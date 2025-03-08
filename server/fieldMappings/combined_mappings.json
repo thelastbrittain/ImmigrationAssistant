@@ -1,29 +1,18 @@
 {
   "user_inputs": {
-    "last_name": "Last Name",
-    "first_name": "First Name",
-    "middle_name": "Middle Name",
-    "street_address": "Street Address",
-    "apt_number": "Apt/Ste/Flr Number",
-    "city": "City",
-    "zip_code": "Zip Code",
-    "date_of_birth": "Date of Birth",
-    "email": "Email",
-    "mobile_phone": "Mobile Phone"
+    "lastName": "",
+    "firstName": "",
+    "middleName": "",
+    "email": "",
+    "mobilePhone": ""
   },
   "pdf_mappings": {
-    "pdf1_template.pdf": {
-      "Part1_Line1_FamilyName[0]": "last_name",
-      "Part1_Line1_GivenName[0]": "first_name",
-      "Part1_Line1_MiddleName[0]": "middle_name",
-      "Part1_Line2_StreetNumberName[0]": "street_address",
-      "Part1_Line2_AptSteFlrNumber[0]": "apt_number",
-      "Part1_Line2_CityOrTown[0]": "city",
-      "Part1_Line2_ZipCode[0]": "zip_code"
-    },
-    "pdf2_template.pdf": {
-      "Part4_Line3_Email[0]": "email",
-      "Part4_Line2_MobilePhone[0]": "mobile_phone"
+    "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/easyDocuments/g-1145-new.pdf": {
+      "form1[0].#subform[0].LastName[0]": "lastName",
+      "form1[0].#subform[0].FirstName[0]": "firstName",
+      "form1[0].#subform[0].MiddleName[0]": "middleName",
+      "form1[0].#subform[0].Email[0]": "email",
+      "form1[0].#subform[0].MobilePhoneNumber[0]": "mobilePhone"
     }
   }
 }
