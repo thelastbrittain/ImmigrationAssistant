@@ -2,7 +2,6 @@ from flask import Flask, request, send_file, jsonify
 from flask_cors import CORS
 from pypdf import PdfReader, PdfWriter
 import zipfile
-import os
 import json
 
 app = Flask(__name__)
@@ -26,7 +25,7 @@ def fill_pdfs():
     with zipfile.ZipFile(zip_filename, 'w') as zipf:
         # Process each PDF in the mapping
         for pdf_template, pdf_fields in field_mappings["pdf_mappings"].items():
-            output_pdf_path = f"filled_{i}"
+            output_pdf_path = f"filled_{i}.pdf"
             i += 1
             fill_pdf(pdf_template, output_pdf_path, pdf_fields, user_data)
             zipf.write(output_pdf_path)

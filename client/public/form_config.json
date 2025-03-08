@@ -1,0 +1,20 @@
+[
+  { "label": "Last Name", "name": "lastName", "type": "text" },
+  { "label": "First Name", "name": "firstName", "type": "text" },
+  { "label": "Middle Name", "name": "middleName", "type": "text" },
+  { "label": "Street Address", "name": "streetAddress", "type": "text" },
+  { "label": "Apt/Ste/Flr Number", "name": "aptNumber", "type": "text" },
+  { "label": "City or Town", "name": "city", "type": "text" },
+  { "label": "Zip Code", "name": "zipCode", "type": "text" },
+  { "label": "Date of Birth", "name": "dateOfBirth", "type": "date" },
+  { "label": "Country of Birth", "name": "countryOfBirth", "type": "text" },
+  {
+    "label": "Country of Citizenship",
+    "name": "countryOfCitizenship",
+    "type": "text"
+  },
+  { "label": "Alien Number (A-Number)", "name": "alienNumber", "type": "text" },
+  { "label": "Daytime Phone Number", "name": "dayPhone", "type": "tel" },
+  { "label": "Email Address", "name": "email", "type": "email" },
+  { "label": "Mobile Phone Number", "name": "mobilePhone", "type": "tel" }
+]
