@@ -1,6 +1,8 @@
 from pypdf import PdfReader, PdfWriter
 from pypdf.generic import NameObject, DictionaryObject
 
+## This was to play around to test various pdf documents
+
 def getFileFields(pdf_path):
     reader = PdfReader(pdf_path)
     # Get all form text fields

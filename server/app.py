@@ -52,3 +52,19 @@ def fill_pdf(input_pdf_path, output_pdf_path, pdf_fields, user_data):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+"""
+  "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/easyDocuments/Form I-130A.pdf": {
+      "Pt1Line1_AlienNumber[0]": "5555",
+      "Pt1Line4a_StreetNumberName[0]": "1234",
+      "Pt1Line4c_CityOrTown[0]": "Camas",
+      "Pt1Line4d_State[0]": "WA",
+      "Pt1Line4e_ZipCode[0]": "",
+      "Pt1Line4h_Country[0]": "",
+      "Pt1Line4g_PostalCode[0]": "",
+      "Pt1Line3a_FamilyName[0]": "",
+      "Pt1Line3b_GivenName[0]": "",
+      "Pt1Line3c_MiddleName[0]": "",
+      "Pt1Line1_AlienNumber[1]": ""
+"""

@@ -1,6 +1,8 @@
 from pypdf import PdfReader, PdfWriter
 from pypdf.generic import BooleanObject, NameObject, IndirectObject
 
+# This was also to play aroundn and mess with data extraction and editing. 
+
 def set_need_appearances_writer(writer):
     """
     Set the /NeedAppearances flag to True in the PDF's /AcroForm dictionary.
@@ -56,9 +58,8 @@ def extract_and_modify_text_fields(pdf_path, output_pdf_path):
     return text_fields
 
 # Example Usage
-input_pdf = "../easyDocuments/i-485-new.pdf"  # Path to your input PDF
-output_pdf = "../modified_example.pdf"  # Path to save the modified PDF
-
+input_pdf = "dataScraping/easyDocuments/Form I-130A.pdf"  # Path to your input PDF
+output_pdf = "dataScraping/modified_example.pdf"  # Path to save the modified PDF
 # Extract and modify text fields
 fields = extract_and_modify_text_fields(input_pdf, output_pdf)
 

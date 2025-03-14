@@ -3,3 +3,8 @@ pip install pycryptodome
 pip install pypdf
 pip install flask
 pip install flask-cors
+
+Things to add later:
+
+- Make Sure date is in the correct format
+- Check boxes for suite/apartment/floor

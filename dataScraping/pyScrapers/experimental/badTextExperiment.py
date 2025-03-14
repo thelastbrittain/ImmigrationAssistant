@@ -1,6 +1,11 @@
 from pypdf import PdfReader
 import json
 
+"""
+This is purely to extract the text fields from a pdf document
+It doesn't get the correct key value pair to edit the pdf.. at least I don't think 
+"""
+
 def extract_fields(pdf_path):
     reader = PdfReader(pdf_path)
     fields = {}
@@ -23,5 +28,5 @@ def generate_mapping_template(pdf_path, output_json):
         json.dump(mapping_template, f, indent=4)
 
 # Example Usage
-inputPath = pdfPath = "server/easyDocuments/i-485-new.pdf"
-generate_mapping_template(inputPath, "server/fieldMappings/i-485.json")
+inputPath = pdfPath = "dataScraping/easyDocuments/Form I-130A.pdf"
+generate_mapping_template(inputPath, "dataScraping/Form I-130ATextMappings")
