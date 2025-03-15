@@ -3,6 +3,7 @@ import json
 
 """
 This extracts all the text headers from a pdf document and puts them all nicely into a json document. 
+Make sure to run this program by run -> run without debugging. This helps the file paths locate correctly. 
 """
 
 def extract_text_fields(pdf_path):
@@ -29,7 +30,7 @@ def generate_mapping_template(pdf_path, output_json):
         json.dump(mapping_template, f, indent=4)
 
 # Example Usage
-immigration_document = "Form I-130A"
+immigration_document = "Form I-130 Petition for Alien Relative"
 inputPath = f"dataScraping/easyDocuments/{immigration_document}.pdf"
 outputPath = f"dataScraping/{immigration_document}TextMappings"
 generate_mapping_template(inputPath, outputPath)

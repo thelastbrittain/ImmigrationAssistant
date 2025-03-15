@@ -54,6 +54,17 @@
       "form1[0].#subform[0].Pt1Line4h_Country[0]": "country",
       "form1[0].#subform[0].Pt1Line4g_PostalCode[0]": "zipCode",
       "form1[0].#subform[0].#area[1].Pt2Line3_USCISELISActNumber[0]": "uscisAccountNumber"
+    },
+    "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/easyDocuments/Form I-765 Employment Authorization.pdf": {
+      "form1[0].Page1[0].Line1a_FamilyName[0]": "lastName",
+      "form1[0].Page1[0].Line1b_GivenName[0]": "firstName",
+      "form1[0].Page1[0].Line1c_MiddleName[0]": "middleName",
+      "form1[0].Page1[0].USCISELISAcctNumber[0]": "USCISELISAcctNumber",
+      "form1[0].Page2[0].Line7_AlienNumber[0]": "alienNumber",
+      "form1[0].Page2[0].Pt2Line7_AptSteFlrNumber[0]": "aptSteFlrNumber",
+      "form1[0].Page2[0].Pt2Line7_CityOrTown[0]": "cityOrTown",
+      "form1[0].Page2[0].Pt2Line7_ZipCode[0]": "zipCode",
+      "form1[0].Page2[0].Pt2Line7_StreetNumberName[0]": "streetNumberName"
     }
   }
 }
