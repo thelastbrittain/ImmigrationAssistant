@@ -6,6 +6,7 @@
   { "label": "Apt/Ste/Flr Number", "name": "aptSteFlrNumber", "type": "text" },
   { "label": "City or Town", "name": "cityOrTown", "type": "text" },
   { "label": "Zip Code", "name": "zipCode", "type": "text" },
+  { "label": "Country", "name": "country", "type": "text" },
   { "label": "Date of Birth", "name": "dateOfBirth", "type": "date" },
   { "label": "Country of Birth", "name": "countryOfBirth", "type": "text" },
   {
