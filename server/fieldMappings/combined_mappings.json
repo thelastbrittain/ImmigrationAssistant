@@ -86,6 +86,21 @@
       "form1[0].#subform[7].Pt4Line55c_MiddleName[0]": "middleName",
       "form1[0].#subform[7].Pt4Line55a_FamilyName[0]": "lastName",
       "form1[0].#subform[7].Pt4Line55b_GivenName[0]": "firstName"
+    },
+    "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/easyDocuments/Form I-131 Application for Travel Documents.pdf": {
+      "form1[0].P4[0].Part2_Line1_MiddleName[0]": "middleName",
+      "form1[0].P4[0].Part2_Line1_GivenName[0]": "firstName",
+      "form1[0].P4[0].Part2_Line1_FamilyName[0]": "lastName",
+      "form1[0].P5[0].Part2_Line3_CityTown[0]": "cityOrTown",
+      "form1[0].P5[0].Part2_Line3_ZipCode[0]": "zipCode",
+      "form1[0].P5[0].Part2_Line3_StreetNumberName[0]": "streetNumberName",
+      "form1[0].P5[0].Part2_Line3_AptSteFlrNumber[0]": "aptSteFlrNumber",
+      "form1[0].P5[0].Part2_Line3_PostalCode[0]": "zipCode",
+      "form1[0].P5[0].Part2_Line3_Country[0]": "country",
+      "form1[0].P5[0].Part2_Line11_USCISOnlineAcctNumber[0]": "USCISELISAcctNumber",
+      "form1[0].P5[0].#area[0].Part2_Line5_AlienNumber[0]": "alienNumber",
+      "form1[0].P5[0].Part2_Line9_DateOfBirth[0]": "dateOfBirth",
+      "form1[0].P5[0].Part2_Line6_CountryOfBirth[0]": "countryOfBirth"
     }
   }
 }
