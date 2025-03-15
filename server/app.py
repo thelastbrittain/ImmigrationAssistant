@@ -51,7 +51,7 @@ def fill_pdf(input_pdf_path, output_pdf_path, pdf_fields, user_data):
         writer.write(output_file)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=False)
 
 
 """
