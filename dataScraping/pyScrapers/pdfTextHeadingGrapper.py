@@ -30,7 +30,7 @@ def generate_mapping_template(pdf_path, output_json):
         json.dump(mapping_template, f, indent=4)
 
 # Example Usage
-immigration_document = "Form I-131 Application for Travel Documents"
+immigration_document = "Form I-864 Affidavit of Support"
 inputPath = f"dataScraping/easyDocuments/{immigration_document}.pdf"
-outputPath = f"dataScraping/{immigration_document}TextMappings"
+outputPath = f"dataScraping/{immigration_document}TextMappings.json"
 generate_mapping_template(inputPath, outputPath)

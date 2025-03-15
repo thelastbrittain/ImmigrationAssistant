@@ -59,7 +59,7 @@
       "form1[0].Page1[0].Line1a_FamilyName[0]": "lastName",
       "form1[0].Page1[0].Line1b_GivenName[0]": "firstName",
       "form1[0].Page1[0].Line1c_MiddleName[0]": "middleName",
-      "form1[0].Page1[0].USCISELISAcctNumber[0]": "USCISELISAcctNumber",
+      "form1[0].Page1[0].USCISELISAcctNumber[0]": "uscisAccountNumber",
       "form1[0].Page2[0].Line7_AlienNumber[0]": "alienNumber",
       "form1[0].Page2[0].Pt2Line7_AptSteFlrNumber[0]": "aptSteFlrNumber",
       "form1[0].Page2[0].Pt2Line7_CityOrTown[0]": "cityOrTown",
@@ -68,7 +68,7 @@
     },
     "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/easyDocuments/Form I-130 Petition for Alien Relative.pdf": {
       "form1[0].#subform[4].#area[6].Pt4Line1_AlienNumber[0]": "alienNumber",
-      "form1[0].#subform[4].#area[7].Pt4Line2_USCISOnlineActNumber[0]": "USCISELISAcctNumber",
+      "form1[0].#subform[4].#area[7].Pt4Line2_USCISOnlineActNumber[0]": "uscisAccountNumber",
       "form1[0].#subform[4].Pt4Line4a_FamilyName[0]": "lastName",
       "form1[0].#subform[4].Pt4Line4b_GivenName[0]": "firstName",
       "form1[0].#subform[4].Pt4Line4c_MiddleName[0]": "middleName",
@@ -97,10 +97,26 @@
       "form1[0].P5[0].Part2_Line3_AptSteFlrNumber[0]": "aptSteFlrNumber",
       "form1[0].P5[0].Part2_Line3_PostalCode[0]": "zipCode",
       "form1[0].P5[0].Part2_Line3_Country[0]": "country",
-      "form1[0].P5[0].Part2_Line11_USCISOnlineAcctNumber[0]": "USCISELISAcctNumber",
+      "form1[0].P5[0].Part2_Line11_USCISOnlineAcctNumber[0]": "uscisAccountNumber",
       "form1[0].P5[0].#area[0].Part2_Line5_AlienNumber[0]": "alienNumber",
       "form1[0].P5[0].Part2_Line9_DateOfBirth[0]": "dateOfBirth",
       "form1[0].P5[0].Part2_Line6_CountryOfBirth[0]": "countryOfBirth"
+    },
+    "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/easyDocuments/Form I-864 Affidavit of Support.pdf": {
+      "form1[0].#subform[2].P2_Line1a_FamilyName[0]": "lastName",
+      "form1[0].#subform[2].P2_Line1b_GivenName[0]": "firstName",
+      "form1[0].#subform[2].P2_Line1c_MiddleName[0]": "middleName",
+      "form1[0].#subform[2].P2_Line2_StreetNumberName[0]": "streetNumberName",
+      "form1[0].#subform[2].P2_Line2_AptSteFlrNumber[0]": "aptSteFlrNumber",
+      "form1[0].#subform[2].P2_Line2_CityOrTown[0]": "cityOrTown",
+      "form1[0].#subform[2].P2_Line2_ZipCode[0]": "zipCode",
+      "form1[0].#subform[2].P2_Line2_PostalCode[0]": "zipCode",
+      "form1[0].#subform[2].P2_Line2_Country[0]": "country",
+      "form1[0].#subform[2].P2_Line3_CountryCitizenship[0]": "countryOfCitizenship",
+      "form1[0].#subform[2].P2_Line4_DateOfBirth[0]": "dateOfBirth",
+      "form1[0].#subform[2].#area[2].P2_Line5_AlienNumber[0]": "alienNumber",
+      "form1[0].#subform[2].Pt2_Line6_USCISOnlineAcctNumber[0]": "uscisAccountNumber",
+      "form1[0].#subform[2].P2_Line7_DaytimePhoneNumber[0]": "dayPhone"
     }
   }
 }
