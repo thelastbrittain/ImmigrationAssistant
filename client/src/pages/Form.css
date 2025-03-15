@@ -1,0 +1,68 @@
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #5b3a29; /* Light brown background */
+  padding: 20px;
+}
+
+/* Heading */
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffd700; /* Gold text for contrast */
+  margin-bottom: 20px;
+}
+
+/* Form */
+.form {
+  width: 100%;
+  max-width: 500px;
+  background-color: #8fbc8f; /* Soft green form background */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Label */
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #3c341f; /* Deep brown for text */
+}
+
+/* Input */
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #3c341f; /* Deep brown border */
+  font-size: 14px;
+}
+
+/* Button */
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3c341f; /* Deep brown button */
+  color: #ffd700; /* Gold text for contrast */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #2e2e1f; /* Slightly darker brown on hover*/
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Form.css";
 
 function Form() {
   const [formConfig, setFormConfig] = useState([]);
@@ -49,23 +50,27 @@ function Form() {
   };
 
   return (
-    <div>
-      <h1>Fill Out the Form</h1>
-      <form onSubmit={handleSubmit}>
+    <div className="container">
+      <h1 className="heading">Green Card Form</h1>
+      <form onSubmit={handleSubmit} className="form">
         {formConfig.map((field) => (
-          <div key={field.name}>
-            <label>{field.label}:</label>
-            <br />
+          <div key={field.name} className="form-group">
+            <label htmlFor={field.name} className="label">
+              {field.label}:
+            </label>
             <input
               type={field.type}
               name={field.name}
+              id={field.name}
               value={formData[field.name]}
               onChange={handleChange}
+              className="input"
             />
-            <br />
           </div>
         ))}
-        <button type="submit">Submit</button>
+        <button type="submit" className="button">
+          Submit
+        </button>
       </form>
     </div>
   );

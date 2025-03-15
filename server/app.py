@@ -1,4 +1,4 @@
-from flask import Flask, request, send_file, jsonify
+from flask import Flask, request, send_file
 from flask_cors import CORS
 from pypdf import PdfReader, PdfWriter
 import zipfile
