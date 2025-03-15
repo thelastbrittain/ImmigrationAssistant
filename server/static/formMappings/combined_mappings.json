@@ -18,14 +18,14 @@
     "dayPhone": ""
   },
   "pdf_mappings": {
-    "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/easyDocuments/g-1145-new.pdf": {
+    "g-1145-new.pdf": {
       "form1[0].#subform[0].LastName[0]": "lastName",
       "form1[0].#subform[0].FirstName[0]": "firstName",
       "form1[0].#subform[0].MiddleName[0]": "middleName",
       "form1[0].#subform[0].Email[0]": "email",
       "form1[0].#subform[0].MobilePhoneNumber[0]": "mobilePhone"
     },
-    "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/easyDocuments/i-485-new.pdf": {
+    "i-485-new.pdf": {
       "form1[0].#subform[0].Part1_Line1_FamilyName[0]": "lastName",
       "form1[0].#subform[0].Part1_Line1_GivenName[0]": "firstName",
       "form1[0].#subform[0].Part1_Line1_MiddleName[0]": "middleName",
@@ -42,7 +42,7 @@
       "form1[0].#subform[2].Part4_Line3_Email[0]": "email",
       "form1[0].#subform[2].Part4_Line2_MobilePhone[0]": "mobilePhone"
     },
-    "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/easyDocuments/Form I-130A.pdf": {
+    "Form I-130A.pdf": {
       "form1[0].#subform[0].Pt1Line3a_FamilyName[0]": "lastName",
       "form1[0].#subform[0].Pt1Line3b_GivenName[0]": "firstName",
       "form1[0].#subform[0].Pt1Line3c_MiddleName[0]": "middleName",
@@ -55,7 +55,7 @@
       "form1[0].#subform[0].Pt1Line4g_PostalCode[0]": "zipCode",
       "form1[0].#subform[0].#area[1].Pt2Line3_USCISELISActNumber[0]": "uscisAccountNumber"
     },
-    "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/easyDocuments/Form I-765 Employment Authorization.pdf": {
+    "Form I-765 Employment Authorization.pdf": {
       "form1[0].Page1[0].Line1a_FamilyName[0]": "lastName",
       "form1[0].Page1[0].Line1b_GivenName[0]": "firstName",
       "form1[0].Page1[0].Line1c_MiddleName[0]": "middleName",
@@ -66,7 +66,7 @@
       "form1[0].Page2[0].Pt2Line7_ZipCode[0]": "zipCode",
       "form1[0].Page2[0].Pt2Line7_StreetNumberName[0]": "streetNumberName"
     },
-    "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/easyDocuments/Form I-130 Petition for Alien Relative.pdf": {
+    "Form I-130 Petition for Alien Relative.pdf": {
       "form1[0].#subform[4].#area[6].Pt4Line1_AlienNumber[0]": "alienNumber",
       "form1[0].#subform[4].#area[7].Pt4Line2_USCISOnlineActNumber[0]": "uscisAccountNumber",
       "form1[0].#subform[4].Pt4Line4a_FamilyName[0]": "lastName",
@@ -87,7 +87,7 @@
       "form1[0].#subform[7].Pt4Line55a_FamilyName[0]": "lastName",
       "form1[0].#subform[7].Pt4Line55b_GivenName[0]": "firstName"
     },
-    "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/easyDocuments/Form I-131 Application for Travel Documents.pdf": {
+    "Form I-131 Application for Travel Documents.pdf": {
       "form1[0].P4[0].Part2_Line1_MiddleName[0]": "middleName",
       "form1[0].P4[0].Part2_Line1_GivenName[0]": "firstName",
       "form1[0].P4[0].Part2_Line1_FamilyName[0]": "lastName",
@@ -102,7 +102,7 @@
       "form1[0].P5[0].Part2_Line9_DateOfBirth[0]": "dateOfBirth",
       "form1[0].P5[0].Part2_Line6_CountryOfBirth[0]": "countryOfBirth"
     },
-    "/Users/benjaminbrittain/Desktop/SandboxHackathon/server/easyDocuments/Form I-864 Affidavit of Support.pdf": {
+    "Form I-864 Affidavit of Support.pdf": {
       "form1[0].#subform[2].P2_Line1a_FamilyName[0]": "lastName",
       "form1[0].#subform[2].P2_Line1b_GivenName[0]": "firstName",
       "form1[0].#subform[2].P2_Line1c_MiddleName[0]": "middleName",
