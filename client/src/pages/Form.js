@@ -29,11 +29,14 @@ function Form() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("/fill-pdfs", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    const response = await fetch(
+      "http://immigration-assistant-server-env.eba-6fwg4m28.us-east-1.elasticbeanstalk.com/fill-pdfs",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      }
+    );
 
     if (response.ok) {
       const blob = await response.blob();

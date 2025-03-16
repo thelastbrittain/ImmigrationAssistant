@@ -1,5 +1,5 @@
 import os # only needed when running locally
-from flask import Flask, request, send_file, url_for
+from flask import Flask, request, send_file , url_for
 from flask_cors import CORS
 from pypdf import PdfReader, PdfWriter
 import zipfile
@@ -7,17 +7,29 @@ import json
 import tempfile
 
 application = Flask(__name__)
-CORS(application)
+CORS(application, resources={r"/*": {"origins": "*"}})  # Allow all origins
 
 # Load field mappings from a JSON file
 @application.before_request
 def load_field_mappings():
+    print("In before_all")
+    # print_project_tree(application.root_path)
     global field_mappings
     # json_mapping_path = url_for("static", filename="formMappings/combined_mappings.json") ## for deployment
     json_mapping_path = os.path.join(application.root_path, "static", "formMappings", "combined_mappings.json") # for local dev
+    print(json_mapping_path)
+    print()
 
     with open(json_mapping_path, 'r') as f:
         field_mappings = json.load(f)
+
+@application.route("/test", methods=["GET"])
+def test_api():
+    return "Application is live!"
+
+@application.route('/')
+def health_check():
+    return "OK", 200
 
 @application.route("/fill-pdfs", methods=["POST"])
 def fill_pdfs():
@@ -44,7 +56,7 @@ def fill_pdfs():
 def fill_pdf(input_pdf_path, output_pdf_path, pdf_fields, user_data):
     """Fill a single PDF based on its field mappings."""
     # input_pdf_path = url_for("static", filename="formMappings/{input_pdf_path}") ## for deployment
-    input_pdf_path = os.path.join(application.root_path, "static", "immigrationPDFS", input_pdf_path) # for local dev
+    input_pdf_path = os.path.join(application.root_path, "static", "immigrationPDFs", input_pdf_path) # for local dev
     reader = PdfReader(input_pdf_path)
     writer = PdfWriter()
     
@@ -58,6 +70,15 @@ def fill_pdf(input_pdf_path, output_pdf_path, pdf_fields, user_data):
 
     with open(output_pdf_path, 'wb') as output_file:
         writer.write(output_file)
+
+# def print_project_tree(startpath):
+#     for root, dirs, files in os.walk(startpath):
+#         level = root.replace(startpath, '').count(os.sep)
+#         indent = '  ' * level
+#         print('{}{}/'.format(indent, os.path.basename(root)))
+#         sub_indent = '  ' * (level + 1)
+#         for f in files:
+#             print('{}{}'.format(sub_indent, f))
 
 if __name__ == "__main__":
     application.run(debug=True, use_reloader=False)
