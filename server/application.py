@@ -5,9 +5,11 @@ from pypdf import PdfReader, PdfWriter
 import zipfile
 import json
 import tempfile
+from flask_talisman import Talisman # type: ignore
 
 application = Flask(__name__)
 CORS(application, resources={r"/*": {"origins": "*"}})  # Allow all origins
+Talisman(application)
 
 # Load field mappings from a JSON file
 @application.before_request
@@ -22,6 +24,7 @@ def load_field_mappings():
 
     with open(json_mapping_path, 'r') as f:
         field_mappings = json.load(f)
+
 
 @application.route("/test", methods=["GET"])
 def test_api():
