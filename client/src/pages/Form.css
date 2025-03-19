@@ -1,68 +1,57 @@
-/* Container */
+/* Container Styling */
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #5b3a29; /* Light brown background */
-  padding: 20px;
+  background-color: #c7bcb4; /* Matches the rest of your app */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle depth */
 }
 
-/* Heading */
+/* Heading Styling */
 .heading {
-  font-size: 24px;
-  font-weight: bold;
-  color: #ffd700; /* Gold text for contrast */
+  color: #014b3f; /* Dark green text for contrast */
+  text-align: center;
+  font-size: 28px;
   margin-bottom: 20px;
 }
 
-/* Form */
+/* Form Styling */
 .form {
-  width: 100%;
-  max-width: 500px;
-  background-color: #8fbc8f; /* Soft green form background */
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
-/* Form Group */
+/* Form Group Styling */
 .form-group {
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
-/* Label */
+/* Label Styling */
 .label {
-  display: block;
-  margin-bottom: 5px;
+  color: #014b3f; /* Dark green text */
   font-size: 16px;
-  font-weight: bold;
-  color: #3c341f; /* Deep brown for text */
 }
 
-/* Input */
+/* Input Styling */
 .input {
-  width: 100%;
   padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #3c341f; /* Deep brown border */
-  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff6ef; /* Matches the container background */
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle inset shadow */
 }
 
-/* Button */
+/* Button Styling */
 .button {
-  width: 100%;
+  background-color: #014b3f; /* Dark green background */
+  color: white; /* White text for contrast */
   padding: 12px;
-  background-color: #3c341f; /* Deep brown button */
-  color: #ffd700; /* Gold text for contrast */
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 4px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 .button:hover {
-  background-color: #2e2e1f; /* Slightly darker brown on hover*/
+  background-color: #016556; /* Slightly lighter shade on hover */
 }
