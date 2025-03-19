@@ -89,7 +89,7 @@ function About() {
           }}
         >
           <img
-            src="AlexPaulLinkedIn.jpeg" // Replace with actual image path
+            src="alexPaulLinkedIn.jpeg" // Replace with actual image path
             alt="Profile 1"
             style={{
               width: "150px",
@@ -133,7 +133,7 @@ function About() {
           }}
         >
           <img
-            src="benBrittainLinkedIN.jpeg"
+            src="benBrittainLinkedIn.jpeg"
             alt="Profile 3"
             style={{
               width: "150px",
@@ -184,21 +184,18 @@ function About() {
             {/* Left Side */}
             <div style={{ flex: 1, marginLeft: "80px" }}>
               <h3 style={{ marginBottom: "10px", color: "white" }}>
-                Name: John Doe
+                Alex Paul
               </h3>
-              <p style={{ marginBottom: "10px", color: "white" }}>
-                Major: Computer Science
-              </p>
-              <p style={{ color: "white" }}>School: BYU</p>
+              <p style={{ marginBottom: "10px", color: "white" }}>Marketing</p>
+              <p style={{ color: "white" }}>Brigham Young University</p>
             </div>
 
             {/* Right Side */}
             <div style={{ flex: 2 }}>
               <p style={{ color: "white" }}>
-                John is a senior at BYU studying Computer Science. He is
-                passionate about artificial intelligence and has worked on
-                several projects in this field. In his free time, he enjoys
-                hiking and photography.
+                With an eye towards becoming a strategically-minded product
+                marketer, Alex is passionate about solving people's problems and
+                helping them feel valued in this increasingly apathetic world. 
               </p>
             </div>
           </div>
@@ -215,21 +212,19 @@ function About() {
             {/* Left Side */}
             <div style={{ flex: 1, marginLeft: "80px" }}>
               <h3 style={{ marginBottom: "10px", color: "white" }}>
-                Name: Jane Smith
+                Lachlan Phillips
               </h3>
-              <p style={{ marginBottom: "10px", color: "white" }}>
-                Major: Business Management
-              </p>
-              <p style={{ color: "white" }}>School: BYU</p>
+              <p style={{ marginBottom: "10px", color: "white" }}>Economics</p>
+              <p style={{ color: "white" }}>Brigham Young University</p>
             </div>
 
             {/* Right Side */}
             <div style={{ flex: 2 }}>
               <p style={{ color: "white" }}>
-                Jane is a junior at BYU majoring in Business Management. She has
-                a strong interest in entrepreneurship and has started her own
-                small business. She enjoys reading and traveling in her free
-                time.
+                He is an international student from Australia who is currently
+                studying Economics & Business at Brigham Young University.  He
+                hopes to be able to one day work for startup companies and
+                contribute to their overall growth.
               </p>
             </div>
           </div>
@@ -246,21 +241,23 @@ function About() {
             {/* Left Side */}
             <div style={{ flex: 1, marginLeft: "80px" }}>
               <h3 style={{ marginBottom: "10px", color: "white" }}>
-                Name: Alex Johnson
+                Benjamin Brittain
               </h3>
               <p style={{ marginBottom: "10px", color: "white" }}>
-                Major: Mechanical Engineering
+                Computer Science
               </p>
-              <p style={{ color: "white" }}>School: BYU</p>
+              <p style={{ color: "white" }}>Brigham Young University</p>
             </div>
 
             {/* Right Side */}
             <div style={{ flex: 2 }}>
               <p style={{ color: "white" }}>
-                Alex is a sophomore at BYU studying Mechanical Engineering. He
-                is passionate about sustainable energy solutions and has
-                participated in several research projects. In his free time, he
-                enjoys cycling and woodworking.
+                Whether in family, sport, religious, or scholastic pursuits, Ben
+                never settles for anything less than excellence. He is currently
+                a Computer Science student heading into his junior year. He
+                loves learning about new technologies, and his most recent
+                exploration has been learning React to add a front end to
+                various school and personal projects.
               </p>
             </div>
           </div>
