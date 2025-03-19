@@ -8,7 +8,9 @@ import tempfile
 from flask_talisman import Talisman # type: ignore
 
 application = Flask(__name__)
-CORS(application, resources={r"/*": {"origins": "*"}})  # Allow all origins
+CORS(application, resources={r"/*": {"origins": ["http://immigrationassistant.thelastbrittain.click", "https://immigrationassistant.thelastbrittain.click"], 
+                                     "methods": ["GET", "POST", "OPTIONS"], "allow_headers": ["Content-Type"]}})
+
 Talisman(application)
 
 # Load field mappings from a JSON file
@@ -33,6 +35,14 @@ def test_api():
 @application.route('/')
 def health_check():
     return "OK", 200
+
+@application.route('/fill-pdfs', methods=['OPTIONS'])
+def handle_preflight():
+    response = application.make_response("")
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Methods"] = "POST, OPTIONS"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    return response
 
 @application.route("/fill-pdfs", methods=["POST"])
 def fill_pdfs():
