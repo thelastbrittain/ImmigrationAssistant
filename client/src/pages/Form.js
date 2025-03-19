@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
+import ClipLoader from "react-spinners/ClipLoader"; // Import ClipLoader from react-spinners
 import "./Form.css";
 
 function Form() {
   const [formConfig, setFormConfig] = useState([]);
   const [formData, setFormData] = useState({});
+  const [isLoading, setIsLoading] = useState(false); // Loading state
 
   useEffect(() => {
-    // Fetch form configuration dynamically (or load locally)
     let configPath = `/form_config.json`;
     fetch(configPath)
       .then((response) => response.json())
       .then((data) => {
         setFormConfig(data);
-        // Initialize form data state
         const initialData = {};
         data.forEach((field) => {
           initialData[field.name] = "";
@@ -23,55 +23,57 @@ function Form() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setFormData({ ...formData, [name]: value });
   };
 
   const fixDate = (oldDate) => {
-    // Parse the input date as a UTC date string
-    const date = new Date(oldDate + "T00:00:00Z"); // Adding 'T00:00:00Z' ensures it's treated as UTC
-
+    const date = new Date(oldDate + "T00:00:00Z");
     const month = (date.getUTCMonth() + 1).toString().padStart(2, "0");
     const day = date.getUTCDate().toString().padStart(2, "0");
     const year = date.getUTCFullYear();
-
-    return `${month}/${day}/${year}`; // Format date as mm/dd/yyyy
+    return `${month}/${day}/${year}`;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true); // Start loading spinner
 
     const formattedData = { ...formData };
-
-    // Iterate over form data to format any date fields
     Object.keys(formattedData).forEach((key) => {
       if (
         formConfig.some((field) => field.name === key && field.type === "date")
       ) {
-        formattedData[key] = fixDate(formattedData[key]); // Apply date formatting
+        formattedData[key] = fixDate(formattedData[key]);
       }
     });
 
-    const response = await fetch(
-      "https://immigration-api.thelastbrittain.click/fill-pdfs",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formattedData),
-      }
-    );
+    try {
+      const response = await fetch(
+        "https://immigration-api.thelastbrittain.click/fill-pdfs",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formattedData),
+        }
+      );
 
-    if (response.ok) {
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "filled_pdfs.zip";
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-    } else {
-      alert("Failed to fill the PDFs.");
+      if (response.ok) {
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "filled_pdfs.zip";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      } else {
+        alert("Failed to fill the PDFs.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again.");
+    } finally {
+      setIsLoading(false); // Stop loading spinner
     }
   };
 
@@ -94,8 +96,16 @@ function Form() {
             />
           </div>
         ))}
-        <button type="submit" className="button">
-          Submit
+        <button
+          type="submit"
+          className="button"
+          disabled={isLoading} // Disable button while loading
+        >
+          {isLoading ? (
+            <ClipLoader color="#FFF6EF" size={20} /> // Show spinner in button
+          ) : (
+            "Submit"
+          )}
         </button>
       </form>
     </div>
